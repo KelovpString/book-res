@@ -14,6 +14,18 @@ jobs:
       - uses: srt32/git-actions@v0.0.3
         with:
           args: git submodule update --init --recursive
+      #node js
+      - name: use Node.js 10
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      # nodeJs
+      - name: npm install and build
+        run: |
+          npm install
+          npm run build
+        env:
+          CI: true 
       # Deploy
       - name: Deploy
         uses: easingthemes/ssh-deploy@v2.0.7
