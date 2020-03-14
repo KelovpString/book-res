@@ -14,8 +14,6 @@ jobs:
       uses: burnett01/rsync-deployments@4.0
       with:
         switches: -avzr --delete
-        path: src/
-        rsh:  ./gitbookpub.sh
         remote_path: /home/html/
         remote_host: ${{ secrets.REMOTE_HOST }}
         remote_user: ${{ secrets.REMOTE_USER }}
