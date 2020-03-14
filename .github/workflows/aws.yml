@@ -1,37 +1,23 @@
-name: deploy to aliyun book
+name: CI
+
 on:
   push:
     branches:
       - master
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      # 切换分支
-      - name: Checkout
-        uses: actions/checkout@master
-      # 下载 git submodule
-      - uses: srt32/git-actions@v0.0.3
-        with:
-          args: git submodule update --init --recursive
-      #node js
-      - name: use Node.js 10
-        uses: actions/setup-node@v1
-        with:
-          node-version: 10
-      # nodeJs
-      - name: npm install and build
-        run: |
-          npm install
-          npm run build
-        env:
-          CI: true 
-      # Deploy
-      - name: Deploy
-        uses: easingthemes/ssh-deploy@v2.0.7
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.ACCESS_TOKEN }}
-          ARGS: "-avz --delete"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.REMOTE_TARGET }}
+    - uses: actions/checkout@v1
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@4.0
+      with:
+        switches: -avzr --delete
+        path: src/
+        rsh:  ./gitbookpub.sh
+        remote_path: /home/html/
+        remote_host: ${{ secrets.REMOTE_HOST }}
+        remote_port: 22
+        remote_user: ${{ secrets.REMOTE_USER }}
+        remote_key: ${{ secrets.ACCESS_TOKEN }}
