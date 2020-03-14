@@ -18,6 +18,5 @@ jobs:
         rsh:  ./gitbookpub.sh
         remote_path: /home/html/
         remote_host: ${{ secrets.REMOTE_HOST }}
-        remote_port: 22
         remote_user: ${{ secrets.REMOTE_USER }}
         remote_key: ${{ secrets.ACCESS_TOKEN }}
