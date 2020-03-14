@@ -6,15 +6,16 @@ on:
       - master
 
 jobs:
-  deploy:
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: rsync deployments
-      uses: burnett01/rsync-deployments@4.0
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
       with:
-        switches: -avzr --delete
-        remote_path: /home/html/
-        remote_host: 47.95.116.109
-        remote_user: root
-        remote_key: ${{ secrets.ACCESS_TOKEN }}
+        host: ${{ secrets.REMOTE_TARGET }}
+        username: ${{ secrets.REMOTE_USER }}
+        key: ${{ secrets.ACCESS_TOKEN }}
+        port: 22
+        script: ls -al
