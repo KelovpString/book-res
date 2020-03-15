@@ -1,7 +1,6 @@
 {
     "plugins": [
         "lightbox",
-        "page-treeview",
         "chapter-fold",
         "expandable-chapters-small",
         "code",
@@ -14,11 +13,6 @@
         "github"
     ],
     "pluginsConfig": {
-        "page-treeview": {
-            "copyright": "Copyright &#169; aleen42",
-            "minHeaderCount": "2",
-            "minHeaderDeep": "2"
-        },
         "github": {
      	   "url": "https://github.com/KelovpString"
      	}
