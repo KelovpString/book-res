@@ -1,6 +1,5 @@
 {
     "plugins": [
-        "pageview-count",
         "lightbox",
         "simple-page-toc",
         "page-treeview",
