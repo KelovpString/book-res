@@ -1,7 +1,6 @@
 {
     "plugins": [
         "lightbox",
-        "simple-page-toc",
         "page-treeview",
         "chapter-fold",
         "expandable-chapters-small",
@@ -15,10 +14,6 @@
         "github"
     ],
     "pluginsConfig": {
-        "simple-page-toc": {
-            "maxDepth": 3,
-            "skipFirstH1": true
-        },
         "page-treeview": {
             "copyright": "Copyright &#169; aleen42",
             "minHeaderCount": "2",
