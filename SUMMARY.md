@@ -2,7 +2,7 @@
 
 * [简介](README.md)
 * [Java基础](JavaBasic/README.md)
-    * Java集合 test
+    * Java集合
 * Java进阶
 
 -----
