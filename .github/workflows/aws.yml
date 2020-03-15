@@ -18,5 +18,8 @@ jobs:
         username: root
         key: ${{ secrets.ACCESS_TOKEN }}
         port: 22
-        script: ./push.sh
+        script_stop: true 
+        script: |
+          ./push.sh
+          exit
 
