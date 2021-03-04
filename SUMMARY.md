@@ -48,7 +48,7 @@
 * [面试面经](Interview/README.md)
     * 基础考点
     * 算法题目
-        * [大数四则运算](Interview/code/)
+        * [大数四则运算](Interview/code/string_num.md)
     * 系统设计
     * 项目问答
 
