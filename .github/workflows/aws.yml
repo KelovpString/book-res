@@ -11,11 +11,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: Set up SSH
-      uses: MrSquaare/ssh-setup-action@v1
+    - name: Publish
+      uses: fifsky/ssh-action@master
       with:
-        host: 42.193.100.111
-        private-key: ${{ secrets.PRIVATE_KEY }}
-    - name: sh cli
-      run: sh ~/cli.sh
-
+        command: sh ~/cli.sh
+        host: ${{ secrets.REMOTE_HOST }}
+        user: root
+        key: ${{ secrets.PRIVATE_KEY }}
