@@ -11,11 +11,11 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
+    - name: Set up SSH
+      uses: MrSquaare/ssh-setup-action@v1
       with:
         host: 42.193.100.111
         private-key: ${{ secrets.PRIVATE_KEY }}
-        script_stop: true 
-        script: ./push.sh
+    - name: Do CLI
+      run: echo "Hello"
 
