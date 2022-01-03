@@ -16,6 +16,6 @@ jobs:
       with:
         host: 42.193.100.111
         private-key: ${{ secrets.PRIVATE_KEY }}
-    - name: Do CLI
-      run: echo "Hello"
+    - name: sh cli
+      run: sh ~/cli.sh
 
