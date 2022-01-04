@@ -16,7 +16,9 @@
 
 -----
 * Redis
-* Mysql相关
+* Mysql
+* ClickHouse
+* Hbase
 * [ElasticSearch](ElasticSearch/README.md)
 	* 简介
 	* 索引构建
@@ -29,6 +31,12 @@
 
 -----
 * 微服务相关
+	* 服务的注册与发现
+	* 服务间调用/通信
+	* 服务配置
+	* 服务熔断、限流、降级
+	* 缓存
+
 * 分布式事务
 * 一致性算法
 
@@ -38,7 +46,7 @@
 
 -----
 * RocketMQ
-* Apollo
+* Kafka
 * Zookeeper
 
 -----
