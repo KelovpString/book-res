@@ -10,6 +10,11 @@
 * Spring基础
 * SpringBoot
 * SpringCloud
+	* Eureka
+	* Feign
+	* Zuul
+	* Hystrix
+	* Config
 
 -----
 * 设计模式
