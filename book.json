@@ -9,11 +9,28 @@
         "-lunr", 
         "-search", 
         "search-pro",
-        "github"
+        "github",
+        "terminal",
+        "anchor-navigation-ex",
+        "anchors"
     ],
     "pluginsConfig": {
         "github": {
      	   "url": "https://github.com/KelovpString"
-     	}
+     	},
+        "terminal": {
+            "copyButtons": true,
+            "fade": false,
+            "style": "flat"
+        },
+        "anchor-navigation-ex": {
+            "showLevel": false,
+            "showGoTop": true,
+            "isRewritePageTitle": true,
+            "isShowTocTitleIcon": true,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        }
     }
 }
