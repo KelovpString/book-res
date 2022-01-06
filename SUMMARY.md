@@ -23,7 +23,7 @@
 * Redis
 * Mysql
 * ClickHouse
-* Hbase
+* HBase
 * [ElasticSearch](ElasticSearch/README.md)
 	* 简介
 	* 索引构建
@@ -62,6 +62,7 @@
     * 基础考点
     * [算法题目](Interview/code/index.md)
         * [大数四则运算](Interview/code/string_num.md)
+        * [树的遍历](Interview/code/map_find_depth.md)
     * 系统设计
     * 项目问答
 
